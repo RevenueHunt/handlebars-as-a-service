@@ -1,6 +1,10 @@
 require 'sinatra'
 require 'handlebars-engine'
 
+get '/api-hbs' do
+  'needs to be post'
+end
+
 post '/api-hbs' do
   rendered = 'SOMETHING WENT WRONG IN THE TEMPLATE'
   error = ''
