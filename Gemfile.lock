@@ -1,0 +1,41 @@
+GIT
+  remote: https://github.com/sinatra/sinatra.git
+  revision: b4f61f59cf8f938db261a6561a69ca61d01e8581
+  specs:
+    rack-protection (3.0.0)
+      rack
+    sinatra (3.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 3.0.0)
+      tilt (~> 2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    handlebars-engine (0.3.3)
+      handlebars-source
+      mini_racer
+    handlebars-source (4.7.7)
+    libv8-node (16.10.0.0-x86_64-darwin)
+    mini_racer (0.6.2)
+      libv8-node (~> 16.10.0.0)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.8)
+    puma (5.6.2)
+      nio4r (~> 2.0)
+    rack (2.2.3)
+    ruby2_keywords (0.0.5)
+    tilt (2.0.10)
+
+PLATFORMS
+  x86_64-darwin-18
+
+DEPENDENCIES
+  handlebars-engine
+  puma
+  sinatra!
+
+BUNDLED WITH
+   2.3.7
