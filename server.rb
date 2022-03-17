@@ -13,9 +13,6 @@ post '/api-hbs' do
     body = JSON.parse request.body.read
     logger.info body
 
-    # body is a json that contains a params field with a hash with the parameters
-    # and a template field that contains the handlebars template
-    body = JSON.parse body
     params = body['params']
     template = body['template']
 
