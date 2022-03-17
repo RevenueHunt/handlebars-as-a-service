@@ -18,6 +18,7 @@ GEM
       mini_racer
     handlebars-source (4.7.7)
     libv8-node (16.10.0.0-x86_64-darwin)
+    libv8-node (16.10.0.0-x86_64-linux)
     mini_racer (0.6.2)
       libv8-node (~> 16.10.0.0)
     mustermann (1.1.1)
@@ -31,6 +32,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-18
+  x86_64-linux
 
 DEPENDENCIES
   handlebars-engine
