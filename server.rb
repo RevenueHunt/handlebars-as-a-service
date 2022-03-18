@@ -15,7 +15,7 @@ post '/' do
   begin
     parsed_body = JSON.parse body
 
-    context = parsed_body['context']
+    data = parsed_body['data']
 
     logger.info 'BODY'
     logger.info parsed_body
@@ -25,7 +25,7 @@ post '/' do
     handlebars = Handlebars::Engine.new
     begin
       h_template = handlebars.compile(template)
-      rendered = h_template.call(context)
+      rendered = h_template.call(data)
     rescue StandardError => e
       logger.info e.to_s
       error = e.to_s
