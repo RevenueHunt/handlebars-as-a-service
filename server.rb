@@ -1,6 +1,18 @@
 require 'sinatra'
 require 'handlebars-engine'
 
+handlebars = Handlebars::Engine.new
+
+# Add future helpers from
+# https://github.com/helpers/handlebars-helpers
+eq = <<~JS
+function(arg1, arg2, options) {
+  return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
+}
+JS
+
+handlebars.register_helper(eq: eq)
+
 get '/' do
   halt 405, 'needs to be post'
 end
@@ -22,7 +34,6 @@ post '/' do
 
     template = parsed_body['template']
 
-    handlebars = Handlebars::Engine.new
     begin
       h_template = handlebars.compile(template)
       rendered = h_template.call(data)
